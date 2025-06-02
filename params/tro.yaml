@@ -1,0 +1,22 @@
+tro:  
+  ros__parameters:
+    splinesStride: 10
+    Tmiddle: 0.05
+    firstSpId: 0
+    v0: 6.0
+
+    Paths:
+      Optimized: /home/andrea/Desktop/trajectory_optimizer/data/x_opt.csv
+      Problem: /home/andrea/Desktop/trajectory_optimizer/data/problem.csv
+      MiddlePoints: /home/andrea/Desktop/trajectory_optimizer/data/midline_points.csv
+      FreeSpace: /home/andrea/Desktop/trajectory_optimizer/data/freeSpace.csv
+      Save: /home/andrea/Desktop/trajectory_optimizer/data/
+
+    Topics:
+      Planner: "/AS/C/trajectory/full"
+      #Path: /AS/C/path
+      #Cones: /AS/C/vis/tro/cones
+      StateCar: "/AS/C/state"
+      #Firstpath: /gro/first
+
+  #conesPath: /home/andrea/Desktop/path2_ws/src/urinay/loops/loop.unay #visualisation purposes
