@@ -3,8 +3,6 @@
     # OPTMIZER params:
 
     # Model Parameters:
-    dRd: 3.5 # Penalizza variazioni di sterzo (Alto = svolte morbide poco zigzag)
-    dRa: 2.0 # Penalizza variazioni di accelerazione (Alto = accelerazioni fluide)
     m: 230.0 # Massa
     Iz: 140.0 # Momento d'inerzia
     Lf: 0.800 # Distanza CoG-Asse anteriore
@@ -20,18 +18,20 @@
     Cd: 1.13583 # Coeff di attrito aerodinamico
     rho: 1.255 # Densita aria
     Ar: 1.04 # Area frontale
-    q_slip: 1.0 # Penalizza slittamento (Alto = stabile)
-    p_long: 3.0 # Peso su accelerazione longitudinale (Alto = accelerazioni graduali)
-    q_n: 0.0 # Penalizza deviazione laterale (Alto = resto sulla midline)
-    q_mu: 0.2 # Penalizza deviazione del coefficiente di attrito
-    lambda: 0.2 # Determina quanto prudente deve essere la guida (Basso = molto)
-    q_s: 0.05 # Pesa progresso lungo la traiettoria. Valore alto veloce ma sporco, basso lento ma pulito
+    dRd: 5.0 # Penalizza variazioni di sterzo (Alto = svolte morbide poco zigzag)
+    dRa: 4.0 # Penalizza variazioni di accelerazione (Alto = accelerazioni fluide)
+    q_slip: 5.0 # Penalizza slittamento (Alto = stabile)
+    p_long: 5.0 # Peso su accelerazione longitudinale (Alto = accelerazioni graduali)
+    q_n: 0.5 # Penalizza deviazione laterale (Alto = resto sulla midline)
+    q_mu: 0.5 # Penalizza deviazione del coefficiente di attrito
+    lambda: 0.01 # Determina quanto prudente deve essere la guida (Basso = molto)
+    q_s: 0.005 # Pesa progresso lungo la traiettoria. Valore alto veloce ma sporco, basso lento ma pulito
 
     # Config
-    curvatureStride: 10  # Discretization of middle trajectory's curvature
+    curvatureStride: 10 # 10 # Discretization of middle trajectory's curvature
     horizonLength: 0  # (if > 0) it sets the horizon length of the NLOP --> curvatureStride won't be used
     debugging: false  # debug flag (if true debug function is called)
 
     Paths:
-      curvature: /home/andrea/Desktop/trajectory_optimizer/data/curvature.csv
-      save: /home/andrea/Desktop/trajectory_optimizer/data/
+      curvature: data/curvature.csv
+      save: data/

@@ -3,7 +3,7 @@ midline_node:
     securityFactor: 2.0
     visualization: false
     separation: 4.0
-    spacing: 60.0 # 0.05 # Distanza tra i punti creati nella midline
+    spacing: 0.05 # Distanza tra i punti creati nella midline
 
-    Paths.midline: /home/andrea/Desktop/trajectory_optimizer/data/cones.csv
-    Paths.save: /home/andrea/Desktop/trajectory_optimizer/data/
+    Paths.midline: data/cones.csv
+    Paths.save: data/
